@@ -1,7 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Energie
 {
@@ -21,7 +19,7 @@ namespace Energie
             Jahresstatistik j1 = Statistic(data, 20);
 
             Console.WriteLine($"MinVerbrauch: " + j1.GetMinVerbrauch());
-            Console.WriteLine($"\nMaxVerbrauch: " + j1.GetMaxVerbrauch());
+            Console.WriteLine($"MaxVerbrauch: " + j1.GetMaxVerbrauch());
         }
 
         internal static readonly string[] separatorArray = ["\r\n", "\r", "\n"];
@@ -64,7 +62,7 @@ namespace Energie
 
                 for (int j = 2; j < 12; j++)
                 {
-                    int UserverbrauchMonat = verbrauch[i][j] - verbrauch[i][j-1];
+                    int UserverbrauchMonat = verbrauch[i][j] - verbrauch[i][j - 1];
                     //System.Console.WriteLine($"UserverbrauchMonat[{i}][{j}]: {UserverbrauchMonat}");
                     int Monatsnummer = j + 1;
                     //System.Console.WriteLine($"Monat: {Monatsnummer}");
